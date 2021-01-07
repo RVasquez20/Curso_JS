@@ -4,11 +4,28 @@
 <meta charset="UTF-8">
 <title>Jugando con variables</title>
 <link rel="stylesheet" href="css/micss2.css">
-<script>
-	var Nombre="Juan",Puntuacion=0,Record=5000;
-
-	alert(Nombre);
-</script>
+<!--Operadores de incremento y decremento, peticion de datos
++=   suma=suma+1;->> suma+=1;
+-=
+*=
+/=
+++
+--
+-->
+	<script>
+		var Nombre,Apellido,anio;
+		var Notas,Nota,Suma=0,Promedio=0;
+		Nombre=prompt("Ingrese su Nombre");
+		Apellido=prompt("Ingrese su Apellido");
+            anio=prompt("Ingrese su Año de nacimiento");
+            var Edad=2021-anio;
+		Notas=prompt("Ingrese La cantidad de notas a promediar");
+		for(var i=0;i<Notas;i++){
+			Nota=prompt("Ingrese La Nota "+(i+1));
+			Suma+=Number(Nota);
+		}
+		Promedio=Suma/Notas;
+	</script>
 </head>
 
 <body>
@@ -19,7 +36,16 @@
 <div class="contenido">
 	<div class="principal">
 <h1>Jugando con las variables</h1>
-
+<script>
+	document.write("<p>");
+	document.write(Nombre+" "+Apellido+ " Tiene "+Edad+" Años y tiene un promedio de "+Promedio );
+	if(Promedio>61){
+		document.write("<p style='color:Green;'> <span>Aprobado</span></p>");
+	}else{
+		document.write("<h1 style='color:#fa0000;'> Reprobado</h1>");
+	}
+	document.write("</p>");
+</script>
 </div>
 </div>
 
