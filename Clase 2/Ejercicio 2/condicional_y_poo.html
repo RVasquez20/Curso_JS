@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+
+<style>
+
+table{
+	margin:auto;
+}
+
+
+</style>
+
+
+</head>
+
+<body id="cuerpo">
+<form name="form1" method="post" action="" id="miformulario">
+  <table width="25%" border="1" id="mitabla">
+    <tr>
+      <td>Nombre:</td>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield"></td>
+    </tr>
+    <tr>
+      <td>Apellidos:</td>
+      <td><input type="text" name="textfield2" id="textfield2"></td>
+    </tr>
+    <tr>
+      <td>Edad:</td>
+      <td><input type="text" name="textfield3" id="textfield3"></td>
+    </tr>
+    <tr>
+      <td>Carnet:</td>
+      <td><input type="text" name="textfield4" id="textfield4"></td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="button" id="button" value="Enviar" onclick="Mostrar2()"></td>
+      <td><input type="reset" name="button2" id="button2" value="Restablecer"></td>
+    </tr>
+  </table>
+</form>
+
+
+<input type="text" id="txt_1" placeholder="Escriba algo" value="" onchange="Mostrar(this.value)">
+<script>
+  function Mostrar(val){
+    alert("Lo que ingreso es "+val);
+  }
+  function Mostrar2(){
+    var valor=document.getElementById("textfield").value;
+    alert(valor);
+    document.form1.textfield2.value=30;
+  }
+</script>
+<script>
+  document.form1.textfield2.value=30;
+</script>
+</body>
+</html>
